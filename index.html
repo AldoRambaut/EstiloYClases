@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estilo y Clases</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h1 text-center">Estilos y Clases</h1>
+      <ol id="preguntas">
+        <li>
+          Cambios dinámicos de estilo: Crea una página web con un botón que, al
+          hacer clic, cambie dinámicamente el color de fondo de un elemento HTML
+          utilizando JavaScript y estilos en el DOM.
+        </li>
+        <li>
+          Alternar clases: Desarrolla una interfaz de lista donde cada elemento
+          pueda cambiar su apariencia al hacer clic en él. Utiliza clases CSS y
+          manipulación del DOM para alternar entre dos estilos diferentes.
+        </li>
+        <li>
+          Validación de formulario en tiempo real: Construye un formulario con
+          campos de entrada y utiliza estilos CSS para resaltar los campos que
+          contienen datos incorrectos. Emplea el DOM para actualizar los estilos
+          en tiempo real mientras el usuario completa el formulario.
+        </li>
+        <li>
+          Galería de imágenes interactiva: Crea una galería de imágenes que
+          permita a los usuarios navegar entre ellas. Utiliza clases y estilos
+          para resaltar la imagen actual y ajustar dinámicamente el tamaño de
+          las miniaturas.
+        </li>
+        <li>
+          Lista desplegable dependiente: Diseña un formulario con dos listas
+          desplegables, donde la selección en la primera afecta dinámicamente
+          las opciones disponibles en la segunda. Utiliza manipulación del DOM
+          para lograr este comportamiento.
+        </li>
+        <li>
+          Menú de navegación responsive: Implementa un menú de navegación que se
+          ajuste de forma dinámica según el tamaño de la pantalla. Utiliza
+          clases CSS para controlar la visibilidad y apariencia del menú en
+          dispositivos móviles y de escritorio.
+        </li>
+        <li>
+          Control de visibilidad: Crea una página con varios elementos y botones
+          que permitan mostrar u ocultar secciones específicas. Utiliza clases y
+          estilos para cambiar la visibilidad de los elementos seleccionados
+          mediante acciones del usuario.
+        </li>
+        <li>
+          Barra de progreso animada: Desarrolla una barra de progreso animada
+          que aumente su longitud gradualmente. Utiliza estilos y manipulación
+          del DOM para reflejar el progreso en respuesta a eventos o acciones
+          específicas.
+        </li>
+        <li>
+          Ordenar elementos arrastrables: Crea una lista de elementos que puedan
+          ser reordenados mediante arrastre. Implementa estilos para resaltar el
+          elemento en movimiento y utiliza el DOM para gestionar el cambio de
+          posición de los elementos en la lista.
+        </li>
+        <li>
+          Cambios de tema personalizables: Diseña una aplicación que permita a
+          los usuarios cambiar el tema de la interfaz entre diferentes opciones.
+          Utiliza clases CSS y el DOM para aplicar dinámicamente estilos según
+          la elección del usuario.
+        </li>
+      </ol>
+      <div id="respuestas">
+        <h4 class="my-3">1. Cambio dinamico de estilo</h4>
+        <button id="cambiarEstilo" class="btn btn-primary">
+          Cambiar estilo
+        </button>
+        <h4 class="my-3">2. Alternar clases</h4>
+        <button id="alternarClases" class="btn btn-primary">
+          Alternar clases
+        </button>
+        <h4 class="my-3">3. Validacion de formulario en tiempo real</h4>
+        <form>
+          <div class="row">
+            <div class="col">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  placeholder="Nombre"
+                  class="form-control"
+                />
+                <label for="nombre">Nombre</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  name="edad"
+                  id="edad"
+                  placeholder="Edad"
+                  class="form-control"
+                />
+                <label for="edad">Edad</label>
+              </div>
+            </div>
+          </div>
+        </form>
+        <h4 class="my-3">4. Galeria de impaisagenes Interactiva</h4>
+        <div class="row row-cols-4 my-3">
+          <div class="col">
+            <img src="./img/paisaje1.png" alt="" class="img-fluid imgGaleria" />
+          </div>
+          <div class="col">
+            <img src="./img/paisaje2.png" alt="" class="img-fluid imgGaleria" />
+          </div>
+          <div class="col">
+            <img src="./img/paisaje3.png" alt="" class="img-fluid imgGaleria" />
+          </div>
+          <div class="col">
+            <img src="./img/paisaje4.png" alt="" class="img-fluid imgGaleria" />
+          </div>
+        </div>
+        <div class="row my-3 d-flex justify-content-between">
+          <div class="col-1">
+            <button class="btn btn-primary" id="anterior">Anterior</button>
+          </div>
+          <div class="col-10">
+            <img
+              src="./img/paisaje1.png"
+              alt=""
+              class="img-fluid imgPrincipal"
+            />
+          </div>
+          <div class="col-1">
+            <button class="btn btn-primary" id="siguiente">Siguiente</button>
+          </div>
+        </div>
+        <h4 class="my-3">5. Lista desplegable dependiente</h4>
+        <div class="row my-3">
+          <div class="col form-floating g-1">
+            <select name="pais" id="pais" class="form-select">
+              <option selected></option>
+              <option value="pais1">Pais 1</option>
+              <option value="pais2">Pais 2</option>
+              <option value="pais3">Pais 3</option>
+            </select>
+            <label for="pais">Seleccione el Pais</label>
+          </div>
+          <div class="col form-floating g-1">
+            <select name="ciudad" id="ciudad" class="form-select"></select>
+            <label for="ciudad"
+              >Seleccione primero el Pais para mostrar las ciudades
+              disponibles</label
+            >
+          </div>
+        </div>
+        <h4 class="my-3">6. Menu de navegacion responsive</h4>
+        <div class="my-3">
+          <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link">Seccion 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Seccion 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Seccion 3</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Seccion 4</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Seccion 5</a></li>
+          </ul>
+        </div>
+        <h4 class="my-3">7. Control de visibilidad</h4>
+        <button class="btn btn-outline-danger" id="ocultarPreguntas">
+          Mostrar/Ocultar Preguntas
+        </button>
+        <h4 class="my-3">8. Barra de progreso animada</h4>
+        <div class="row">
+          <div class="col">
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+              ></div>
+            </div>
+          </div>
+          <div class="col-1">
+            <button id="cargar" class="btn btn-outline-success">Cargar</button>
+          </div>
+          <div class="col-1">
+            <button id="detener" class="btn btn-outline-warning">Detener</button>
+          </div>
+          <div class="col-1">
+            <button id="reiniciar" class="btn btn-outline-danger">
+              Reiniciar
+            </button>
+          </div>
+        </div>
+        <h4 class="my-3">9. Ordenar elementos arrastrables</h4>
+        <ul id="listaArrastrar" class="list-group">
+          <li class="list-group-item list-group-item-success" draggable="true">Elemento 1</li>
+          <li class="list-group-item list-group-item-success" draggable="true">Elemento 2</li>
+          <li class="list-group-item list-group-item-success" draggable="true">Elemento 3</li>
+          <li class="list-group-item list-group-item-success" draggable="true">Elemento 4</li>
+          <li class="list-group-item list-group-item-success" draggable="true">Elemento 5</li>
+          <li class="list-group-item list-group-item-success" draggable="true">Elemento 6</li>
+        </ul>
+        <h4 class="my-3">10. Cambios de tema personalizables</h4>
+        <div class="form-floating">
+          <select name="cambioTema" id="cambioTema" class="form-control">
+            <option selected></option>
+            <option value="text-bg-danger">Danger</option>
+            <option value="text-bg-dark">Dark</option>
+            <option value="text-bg-info">Info</option>
+            <option value="text-bg-light">Light</option>
+            <option value="text-bg-primary">Primary</option>
+            <option value="text-bg-secundary">Secundary</option>
+            <option value="text-bg-success">Success</option>
+            <option value="text-bg-warning">Warning</option>
+          </select>
+          <label for="cambioTema">Seleccione el tema que desea aplicar</label>
+        </div>
+        
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
